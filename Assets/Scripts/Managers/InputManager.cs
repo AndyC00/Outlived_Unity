@@ -46,13 +46,13 @@ public class InputManager : MonoBehaviour
             {
                 ConversationSystem.Instance.Hide();
             }
-            else  //quit the game
+            else if (ExitUI.instance.gameObject.activeSelf)
             {
-                Application.Quit();
-
-#if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-#endif
+                ExitUI.instance.Hide();
+            }
+            else
+            { 
+                ExitUI.instance.Show();
             }
         }
 
