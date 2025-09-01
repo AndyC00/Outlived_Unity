@@ -56,6 +56,11 @@ public class InputManager : MonoBehaviour
             }
         }
 
+        if (ConversationSystem.Instance.gameObject.activeSelf && (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E)))
+        {
+            ConversationSystem.Instance.OnNextButtonClick();
+        }
+
         if (Input.GetKeyDown(KeyCode.Q))    // Testing use only
         {
             GameManager.instance.ResourceCount += 90;

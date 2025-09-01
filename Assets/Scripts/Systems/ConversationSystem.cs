@@ -66,7 +66,7 @@ public class ConversationSystem : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private void OnNextButtonClick()
+    public void OnNextButtonClick()
     {
         contentIndex++;
 
